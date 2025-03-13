@@ -74,58 +74,76 @@ function colocar_migajas() {
 }
 
 
-colocar_migajas();
 
-const footer = document.createElement('footer');
-const div = document.createElement('div');
-div.classList.add('footer-buttons');
 
-// Create 5 buttons
-for (let i = 1; i <= 5; i++) {
-    const button = document.createElement('button');
-    button.textContent = `Button ${i}`;
-    div.appendChild(button);
+function colocar_footer(){
+    const footer = document.createElement('footer');
+    const div = document.createElement('div');
+    div.classList.add('footer-buttons');
+    
+    // Create 5 buttons
+    for (let i = 1; i <= 5; i++) {
+        const button = document.createElement('button');
+        button.textContent = `Button ${i}`;
+        div.appendChild(button);
+    }
+    
+    // Append the div to the footer and the footer to the body
+    footer.appendChild(div);
+    document.body.appendChild(footer);
+    
+    // Add some CSS to make the footer stick to the bottom of the viewport
+    const style = document.createElement('style');
+    style.textContent = `
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    
+        footer {
+            position: fixed; /* Fix the footer at the bottom */
+            left: 0;
+            bottom: 0;
+            width: 100%; /* Ensure it takes up the full width of the viewport */
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            z-index: 1000; /* Ensure the footer stays above other content */
+        }
+    
+        .footer-buttons {
+            display: flex;
+            justify-content: space-around;
+        }
+    
+        button {
+            background-color: #444;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #555;
+        }
+    `;
+    
+    document.head.appendChild(style);
+
+    for(x in document.getElementsByTagName("table")){
+        document.getElementsByTagName("table")[x].className = "zoomable";
+      } 
+    
+      document.addEventListener('click', function(e) {
+        e = e || window.event;
+        var target = e.target || e.srcElement,
+            text = target.textContent || target.innerText;   
+            console.log(target);
+    }, false);
+    
 }
-
-// Append the div to the footer and the footer to the body
-footer.appendChild(div);
-document.body.appendChild(footer);
-
-// Add some CSS to make the footer stick to the bottom of the viewport
-const style = document.createElement('style');
-style.textContent = `
-    body {
-        margin: 0;
-        padding: 0;
-    }
-
-    footer {
-        position: fixed; /* Fix the footer at the bottom */
-        left: 0;
-        bottom: 0;
-        width: 100%; /* Ensure it takes up the full width of the viewport */
-        background-color: #333;
-        color: white;
-        padding: 10px;
-        z-index: 1000; /* Ensure the footer stays above other content */
-    }
-
-    .footer-buttons {
-        display: flex;
-        justify-content: space-around;
-    }
-
-    button {
-        background-color: #444;
-        color: white;
-        border: none;
-        padding: 10px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background-color: #555;
-    }
-`;
-
-document.head.appendChild(style);
+window.onload = function(e){ 
+    colocar_migajas();
+    colocar_footer();
+}
