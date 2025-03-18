@@ -1,0 +1,385 @@
+{
+  "id": "8a59e1e5-ba37-43d9-bb17-42aa2a8bea8d",
+  "version": "2.0",
+  "name": "BIDEROAD",
+  "url": "https://daim.ceit.es/roadinspector/",
+  "tests": [{
+    "id": "7429c75b-6811-47dd-93c5-4bf9d4cf2a47",
+    "name": "R002.SR000.F001.SF000.P001.SP002.EC000",
+    "commands": [{
+      "id": "663b408e-e936-4952-aac2-ffa157d224d4",
+      "comment": "",
+      "command": "open",
+      "target": "https://daim.ceit.es/roadinspector/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d61c1453-5a2b-4c30-98e3-a6d6302443b9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1102x692",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bf5a1d85-ee5d-4aac-8bf5-3d1302d83153",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.getElementsByClassName(\"ant-dropdown-link\").length",
+      "targets": [],
+      "value": "valid_login"
+    }, {
+      "id": "1773ca27-32fa-4da2-8b19-92bea478e5df",
+      "comment": "",
+      "command": "if",
+      "target": "${valid_login}=== 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "60875a37-d8d2-484f-87a9-a1e7250f680c",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=admin",
+      "targets": [
+        ["linkText=admin", "linkText"],
+        ["css=.ant-dropdown-link", "css:finder"],
+        ["xpath=//a[contains(text(),'admin')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/section/main/section/section/header/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'admin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab51b35d-083a-48f1-bd96-625438afe964",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ant-btn-danger",
+      "targets": [
+        ["css=.ant-btn-danger", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//li[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "38d83dca-f705-4238-bf0d-2080e4611461",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa289db5-bd2f-4c47-a6f3-5fd4c4805b28",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ddc80d27-113d-49b3-a899-04197cefec65",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.ant-row:nth-child(2) .ant-input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/main/div/div/form/div/div/div/span/span/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "adfwfwf"
+    }, {
+      "id": "04c0b1c4-bfc3-450b-9b6f-3bfe283efd74",
+      "comment": "",
+      "command": "click",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ant-row:nth-child(3) .ant-input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/main/div/div/form/div[2]/div/div/span/span/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ecb2ff1-4f2a-421a-a354-36abc705968a",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ant-row:nth-child(3) .ant-input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/main/div/div/form/div[2]/div/div/span/span/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span/span/input", "xpath:position"]
+      ],
+      "value": "wefwefwfe"
+    }, {
+      "id": "834c0b9d-389e-4475-ab2f-36678ab87664",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ant-btn",
+      "targets": [
+        ["css=.ant-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/main/div/div/form/div[3]/div/div/span/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "93da772a-e986-44b8-b2d0-c9762c1e8f6b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.ant-alert-message",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "e20bbbe2-7a78-4270-aadf-6768abd72876",
+    "name": "R002.SR000.F001.SF000.P001.SP001.EC000",
+    "commands": [{
+      "id": "e68989b9-49ee-4060-a041-1afb55f881d6",
+      "comment": "",
+      "command": "open",
+      "target": "https://daim.ceit.es/roadinspector/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9397edff-ccd0-4b13-902e-a5cb027a9f96",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "963x910",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "31f62f16-2e00-46f4-a71e-bf5ea59b4ecc",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.getElementsByClassName(\"ant-dropdown-link\").length",
+      "targets": [],
+      "value": "valid_login"
+    }, {
+      "id": "a4c8d597-7f86-40a8-8ad0-30741afd108a",
+      "comment": "",
+      "command": "if",
+      "target": "${valid_login}=== 1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "29c3a353-9b42-44b5-bc74-390dca2593cf",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=admin",
+      "targets": [
+        ["linkText=admin", "linkText"],
+        ["css=.ant-dropdown-link", "css:finder"],
+        ["xpath=//a[contains(text(),'admin')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/section/main/section/section/header/div[2]/div/a", "xpath:idRelative"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'admin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "faf4c599-5013-460e-b49c-f48658ff3d3b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ant-btn-danger",
+      "targets": [
+        ["css=.ant-btn-danger", "css:finder"],
+        ["xpath=(//button[@type='button'])[5]", "xpath:attributes"],
+        ["xpath=//li[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logout')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2c825da4-ec5f-4819-9624-d71dac6a335c",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "33211fe8-64bd-4a25-a396-8cb5206629e8",
+      "comment": "",
+      "command": "click",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.ant-row:nth-child(2) .ant-input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/main/div/div/form/div/div/div/span/span/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a60c9227-1869-44b7-9c76-e02eb3ca4da1",
+      "comment": "",
+      "command": "type",
+      "target": "name=username",
+      "targets": [
+        ["name=username", "name"],
+        ["css=.ant-row:nth-child(2) .ant-input", "css:finder"],
+        ["xpath=//input[@name='username']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/main/div/div/form/div/div/div/span/span/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "1245997a-0b0a-41ab-b5cf-7d24bb37f0aa",
+      "comment": "",
+      "command": "type",
+      "target": "name=password",
+      "targets": [
+        ["name=password", "name"],
+        ["css=.ant-row:nth-child(3) .ant-input", "css:finder"],
+        ["xpath=//input[@name='password']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/main/div/div/form/div[2]/div/div/span/span/input", "xpath:idRelative"],
+        ["xpath=//div[2]/div/div/span/span/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "9e8148a2-4140-4410-a414-47f9173828f5",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ant-btn",
+      "targets": [
+        ["css=.ant-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/main/div/div/form/div[3]/div/div/span/div/div/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "406a8803-7f20-4ca6-b886-03b9f918897d",
+      "comment": "",
+      "command": "waitForElementPresent",
+      "target": "css=.markercluster-map",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "9eec3664-8f0c-481d-8ccd-bda442062581",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "css=.ant-btn",
+      "targets": [
+        ["css=.ant-btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//div[@id='root']/div/div/section/main/div/div/form/div[3]/div/div/span/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Entrar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "d2134411-9990-4e39-95de-7ffccd852be4",
+    "name": "R002.SR000.F001.SF000.P000.SP000.EC000",
+    "commands": [{
+      "id": "ed75c44c-c39a-4f5d-9d41-c525b3f062d8",
+      "comment": "",
+      "command": "run",
+      "target": "R002.SR000.F001.SF000.P001.SP002.EC000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0efd020b-c02b-44fc-8120-5caf6abad10c",
+      "comment": "",
+      "command": "run",
+      "target": "R002.SR000.F001.SF000.P001.SP001.EC000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "524e2c0c-fbb6-4f37-afa5-edd82570d4a0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "cd7bf264-dcd5-4d88-be19-f48aa5a118ba",
+    "name": "R004.SR000.F001.SF000.P000.SP000.EC000",
+    "commands": [{
+      "id": "4911f2b1-addb-44cf-9cd3-3e94b849a4e1",
+      "comment": "",
+      "command": "run",
+      "target": "R002.SR000.F001.SF000.P001.SP001.EC000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5f8f78d1-8026-43f6-850a-ea791df1cab8",
+      "comment": "",
+      "command": "run",
+      "target": "R004.SR000.F001.SF000.P001.SP000.EC000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "496d998f-166e-4c21-bb75-f3474658891a",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "4cc43357-f428-4f19-98f4-19010364a99a",
+    "name": "R004.SR000.F001.SF000.P001.SP000.EC000",
+    "commands": [{
+      "id": "0d477261-fb31-4e82-a1e9-6818b148cc16",
+      "comment": "",
+      "command": "open",
+      "target": "https://daim.ceit.es/roadinspector/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5452cd11-8487-4c8e-8664-f7f5026260ab",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.markercluster-map",
+      "targets": [
+        ["css=.markercluster-map", "css:finder"],
+        ["xpath=//div[@id='root']/div/section/main/section/section/section/main/div/div/div/div", "xpath:idRelative"],
+        ["xpath=//div/div/div/div", "xpath:position"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "e7328a71-230c-473a-a9dc-c73b932ef1ee",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.getElementsByClassName(\"leaflet-marker-pane\")[0].childElementCount",
+      "targets": [],
+      "value": "activos_presentes"
+    }, {
+      "id": "8895e5e7-9fdb-4bb0-86a4-bcb3fc0316f6",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.leaflet-marker-icon:nth-child(2)",
+      "targets": [],
+      "value": "30000"
+    }]
+  }],
+  "suites": [{
+    "id": "a371dd1c-1d0a-4272-9300-ba06b44f90c4",
+    "name": "Master",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["d2134411-9990-4e39-95de-7ffccd852be4", "cd7bf264-dcd5-4d88-be19-f48aa5a118ba"]
+  }, {
+    "id": "9f1c8039-9214-4a4c-ac84-e9ea2147de9e",
+    "name": "R002.SR000.F001.SF000.P001.SP000.EC000",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e20bbbe2-7a78-4270-aadf-6768abd72876", "7429c75b-6811-47dd-93c5-4bf9d4cf2a47"]
+  }, {
+    "id": "8c30cbfd-f26a-4f0f-8c90-79f073ac5e46",
+    "name": "R004.SR000.F001.SF000.P001.SP000.EC000",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["4cc43357-f428-4f19-98f4-19010364a99a"]
+  }],
+  "urls": ["https://daim.ceit.es/", "https://daim.ceit.es/roadinspector/"],
+  "plugins": []
+}
