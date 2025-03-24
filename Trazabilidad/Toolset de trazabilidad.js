@@ -74,8 +74,6 @@ function colocar_migajas() {
 }
 
 
-
-
 function colocar_footer(){
     const footer = document.createElement('footer');
     const div = document.createElement('div');
@@ -135,12 +133,28 @@ function colocar_footer(){
         document.getElementsByTagName("table")[x].className = "zoomable";
       } 
     
-      document.addEventListener('click', function(e) {
-        e = e || window.event;
-        var target = e.target || e.srcElement,
-            text = target.textContent || target.innerText;   
-            console.log(target);
-    }, false);
+
+    function separar_tablas() {
+        let regex = /^R\d{3}\.SR\d{3}\.F\d{3}\.SF\d{3}\.P\d{3}\.SP\d{3}\.EC\d{3}$/;
+var result = document.createElement('table');
+for(let x in document.querySelectorAll('tr')){
+try{
+if(regex.test(document.querySelectorAll('tr')[x].cells[0].innerText)){
+    console.log(document.querySelectorAll('tr')[x].cells[0].innerText);
+
+result.append(document.querySelectorAll('tr')[x]);
+  }
+}catch(e){
+}
+  
+
+}
+document.body.innerHTML="";
+document.body.append(result);
+    }
+    
+   
+    
     
 }
 window.onload = function(e){ 

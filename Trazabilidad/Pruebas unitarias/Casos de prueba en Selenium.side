@@ -357,6 +357,174 @@
       "targets": [],
       "value": "30000"
     }]
+  }, {
+    "id": "c283735b-1f43-463a-a28b-f2edd7544478",
+    "name": "R001.SR000.F006.SF000.P001.SP000.EC000",
+    "commands": [{
+      "id": "8d4dabb6-b342-45fa-8123-c16ff91611e2",
+      "comment": "",
+      "command": "run",
+      "target": "R002.SR000.F001.SF000.P001.SP001.EC000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "014f5409-4493-4773-8532-b9cce7339bf0",
+      "comment": "",
+      "command": "executeScript",
+      "target": "onmousemove = function(e){x= e.clientX; y=e.clientY; console.log(\"x:\"+x+\" y:\"+y);} ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3767ada4-bd3d-4ce0-8d92-9680973ac85b",
+      "comment": "",
+      "command": "executeScript",
+      "target": "function simulateClick(x, y) {     var clickEvent = document.createEvent('MouseEvents');     clickEvent.initMouseEvent('contextmenu', true, true, window, 0, 0, 0, x, y, false, false, false, false, 2, null);     document.elementFromPoint(x, y).dispatchEvent(clickEvent); } simulateClick(155, 391); ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ae576ad8-e927-4ad6-ad1b-be6e29c46044",
+      "comment": "",
+      "command": "clickAt",
+      "target": "linkText=Añadir activo",
+      "targets": [
+        ["linkText=Añadir activo", "linkText"],
+        ["css=.over", "css:finder"],
+        ["xpath=//a[contains(text(),'Añadir activo')]", "xpath:link"],
+        ["xpath=//div[@id='root']/div/section/main/section/section/section/main/div/div/div/div/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '#')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Añadir activo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b46ed9b-892a-4d0d-8abc-6f1488dfde86",
+      "comment": "",
+      "command": "executeScript",
+      "target": " document.getElementsByClassName('ant-select ant-select-enabled')[2].click() ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "263d2a22-3a25-4493-af6e-f988dd0fc36d",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ant-select-tree-treenode-switcher-close:nth-child(1) .ant-select-tree-title",
+      "targets": [
+        ["css=.ant-select-tree-treenode-switcher-close:nth-child(1) .ant-select-tree-title", "css:finder"],
+        ["xpath=//div[@id='rc-tree-select-list_1']/ul/li/span[2]/span", "xpath:idRelative"],
+        ["xpath=//li/span[2]/span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09adc360-529f-4419-bed8-65000667f1ed",
+      "comment": "",
+      "command": "click",
+      "target": "id=form_denm_in_modal_nombre",
+      "targets": [
+        ["id=form_denm_in_modal_nombre", "id"],
+        ["css=#form_denm_in_modal_nombre", "css:finder"],
+        ["xpath=//input[@id='form_denm_in_modal_nombre']", "xpath:attributes"],
+        ["xpath=//div/span/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e58c3993-cbfa-4d68-9a0f-fe7665f500c5",
+      "comment": "",
+      "command": "type",
+      "target": "id=form_denm_in_modal_nombre",
+      "targets": [
+        ["id=form_denm_in_modal_nombre", "id"],
+        ["css=#form_denm_in_modal_nombre", "css:finder"],
+        ["xpath=//input[@id='form_denm_in_modal_nombre']", "xpath:attributes"],
+        ["xpath=//div/span/input", "xpath:position"]
+      ],
+      "value": "Test"
+    }, {
+      "id": "14b52264-70e4-43ec-93b8-04aa772c49e0",
+      "comment": "",
+      "command": "click",
+      "target": "css=.ant-select-selection__placeholder",
+      "targets": [
+        ["css=.ant-select-selection__placeholder", "css:finder"],
+        ["xpath=//div[@id='form_denm_in_modal_tipo_caracteristica']/div/div/div", "xpath:idRelative"],
+        ["xpath=//span/div/div/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "16713316-102a-4502-932e-3fd2aa2d75d1",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "",
+      "targets": [],
+      "value": "${KEY_DOWN}"
+    }, {
+      "id": "bac5959e-6b82-4a67-8b6c-fcc254d3eca0",
+      "comment": "",
+      "command": "sendKeys",
+      "target": "",
+      "targets": [],
+      "value": "${ENTER}"
+    }]
+  }, {
+    "id": "4d5974e4-11ba-42f8-96e9-c2fbe1d7fc33",
+    "name": "R001.SR000.F006.SF000.P000.SP000.EC000",
+    "commands": []
+  }, {
+    "id": "6196a3ab-b082-4651-9c11-c985669d57c0",
+    "name": "NFR001.SR000.F001.SF000.P001.SP000.EC000",
+    "commands": [{
+      "id": "5c7db1f0-988a-4a6f-8f90-05e847f10793",
+      "comment": "",
+      "command": "open",
+      "target": "https://daim.ceit.es/roadinspector_api/api/estado_activo/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b8e995ab-ace7-4d08-8eaa-abf6e6fd7b47",
+      "comment": "",
+      "command": "pause",
+      "target": "2000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b90d6c28-e5ec-4e45-abc0-22506d10a758",
+      "comment": "",
+      "command": "executeScript",
+      "target": "document.getElementById('rawdata-tab').click() ",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd7dd3c2-4dc9-4a24-99e6-a9a26444fc81",
+      "comment": "",
+      "command": "clickAt",
+      "target": "css=.rawdata-tab",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "15b5716a-23a7-4fbe-9b89-fcdd66173c1d",
+      "comment": "",
+      "command": "pause",
+      "target": "10000",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f75d333c-c4e8-4b10-a7c8-2293f30707e9",
+    "name": "NFR001.SR000.F001.SF000.P000.SP000.EC000",
+    "commands": [{
+      "id": "2a8f0549-071b-442c-9f3e-1b3870e9372d",
+      "comment": "",
+      "command": "run",
+      "target": "NFR001.SR000.F001.SF000.P001.SP000.EC000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "659efbea-a689-47a1-9a22-1878feaa2c52",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "a371dd1c-1d0a-4272-9300-ba06b44f90c4",
@@ -364,7 +532,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["d2134411-9990-4e39-95de-7ffccd852be4", "cd7bf264-dcd5-4d88-be19-f48aa5a118ba"]
+    "tests": ["d2134411-9990-4e39-95de-7ffccd852be4", "cd7bf264-dcd5-4d88-be19-f48aa5a118ba", "4d5974e4-11ba-42f8-96e9-c2fbe1d7fc33", "f75d333c-c4e8-4b10-a7c8-2293f30707e9"]
   }, {
     "id": "9f1c8039-9214-4a4c-ac84-e9ea2147de9e",
     "name": "R002.SR000.F001.SF000.P001.SP000.EC000",
@@ -379,6 +547,20 @@
     "parallel": false,
     "timeout": 300,
     "tests": ["4cc43357-f428-4f19-98f4-19010364a99a"]
+  }, {
+    "id": "d2a66611-2831-4751-a054-5f3666796317",
+    "name": "R001.SR000.F004.SF000.P001.SP000.EC000",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c283735b-1f43-463a-a28b-f2edd7544478"]
+  }, {
+    "id": "974d04f7-69db-42cc-9fc5-d1212ef36680",
+    "name": "NFR001.SR000.F001.SF000.P001.SP000.EC000",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["6196a3ab-b082-4651-9c11-c985669d57c0"]
   }],
   "urls": ["https://daim.ceit.es/", "https://daim.ceit.es/roadinspector/"],
   "plugins": []
